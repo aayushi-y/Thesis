@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage {algpseudocode}
+\usepackage{algorithm}
+
+\begin{document}
+\begin{algorithm}
+\caption{Proposed scheme}
+\begin{algorithmic}[1]
+\Procedure{}{}
+\State $avg \gets \textit{average queue length}$
+\State $count \gets \textit{number of packets arriving since last packet marked }$
+\BState \emph{for each packet arrival}:
+\State \textit{calculate the new avg. queue size}
+\If {$buffer \neq \textit{empty}$} 
+\State $avg \gets (1-w\textsubscript{q}) \times avg + w\textsubscript{q} \times q $  
+\Else 
+\State $m \gets f(time-q\_time)$
+\State $avg \gets (1-w\textsubscript{q}) \times m \times avg $
+\EndIf
+\If {$minth \leq avg \leq maxth$}
+\State increment count
+\State calculate c\textsubscript{r}
+\State calculate probability p\textsubscript{a}:
+\State $p\textsubscript{b} \gets maxp \frac{avg-minth}{maxth-minth}$
+\State $p\textsubscript{a} \gets \frac{p\textsubscript{b}}{1-count \times p\textsubscript{b}}$
+    \If{$c\textsubscript{r} \geq 0.5$}
+    \State $P\textsubscript{d} \gets c\textsubscript{r}$
+    \Else
+    \State $P\textsubscript{d} \gets p\textsubscript{a}$
+    \EndIf
+\Else{ $avg \geq maxth$}
+    \State mark the arriving packet with probability p\textsubscript{a}
+    \State $count \gets 0$
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\end{document}

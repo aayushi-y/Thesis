@@ -1,0 +1,25 @@
+\chapter{Klienrock Independent Assumption}	\OnePageChapter         % ONE PAGE!
+Consider a network of communication links as shown in Figure B.1. Assume that there are several packet streams, each following a unique path that consists of a sequence of links through the network. Let x\textsubscript{s}, in packets/sec, be the arrival rate of the packet stream s. Then the total arrival rate at link (i, j) is
+\begin{equation}
+    \lambda \subscript{(i,j)} = \sum x\textsubscript{s}
+\end{equation}
+\begin{figure}[h!]
+    \centering
+    \includegraphics{Thesis/figs/append.png}
+    \caption{Network of communication links}
+    \label{fig:my_label}
+\end{figure}
+Assume that no packets travel in a loop, let x\textsubscript{s} denote the arrival rate of packet
+stream s, and let f\textsubscript{(i,j)}(s) denote the fraction of the packets of stream s that go through link (i,j). Then the total arrival rate at link (i, j) is :
+\begin{equation}
+    \lambda(i,j) = \sum f\subscript{(i,j)} x\textsubscript{s}
+\end{equation}
+We know from the special case of two tandem queues that even if the packet streams are
+Poisson with independent packet lengths at their point of entry into the network, this
+property is lost after the first transmission line. To resolve the dilemma, it was suggested
+by Kleinrock that merging several packet streams on a transmission line has an effect
+\par 
+It was concluded that it is often appropriate to adopt an M/M/1 queueing model for each
+communication link regardless of the interaction of traffic on this link with traffic on
+other links. This is known as Kleinrock independence approximation.
+

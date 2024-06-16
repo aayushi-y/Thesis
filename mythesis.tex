@@ -1,0 +1,129 @@
+\documentclass[defaultstyle,11pt]{thesis}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\newtheorem{definition}{Definition}[subsection]
+\usepackage{amssymb}		% to get all AMS symbols
+\usepackage{graphicx}		% to insert figures
+\usepackage{hyperref}		% PDF hyperreferences??
+\usepackage{appendix}
+\usepackage[acronym]{glossaries}
+%%%%%%%%%%%%   All the preamble material:   %%%%%%%%%%%%
+
+\title{An Active Queue Management Scheme for Wireless Sensor Networks}
+
+\author{Ayushi Yadav}
+\rollnum{2017-AN04}
+%\otherdegrees{B.A., North Dakota State University, 2005 \\
+%	      M.S., University of Reno, 2007}
+
+\degree{\textbf{Master of Technology}\\ in}		%  #1 {long descr.}
+	{\textbf{Advanced Networks}}		%  #2 {short descr.}
+
+\dept{\textbf{Advanced Networks}}			%  #1 {designation}
+	{}	
+		%  #2 {name}
+%\vspace{0.7in}
+
+%\vspace{0.8in}
+
+\advisor{Dr. K.K. Pattanaik}				%  #1 {title}
+	{and Dr. Prasenjit Chanak}		%  #2 {name}
+	
+
+
+%\reader{Prof.~Rachel Goddard}		%  2nd person to sign thesis
+%\readerThree{Ms.~Thora Nea}		%  3rd person to sign thesis
+
+
+\abstract{
+Congestion is one of the significant challenge and important issue related to inherent resource limitation.When a large number of sensor nodes are engaged in transmitting in Wireless Sensor Networks, possibility of congestion arises. Packet loss in the Wireless Sensor Network is caused by the data transmission errors in wireless networks, signal degradation over the network medium due to multipath fading and as well as network congestion.
+\par
+Over the years, many researchers have done some significant work in this field.There have been many ways to cope up with the congestion in sensor networks such as choosing an alternative route between source and the sink, prioritizing the incoming traffic and implementing virtual queues for the same.  It is a proven statement that in Wireless Sensor Networks there is enormous spatial redundancy, i.e. information for a specific location or any specific event may be available from several sensor nodes deployed in the sensor field.The amount of redundancy needed or required is one of the major factors influencing almost all strategies designed for Wireless Sensor Networks.Keeping in mind this spatial redundancy, there is a large scope for congestion control algorithms to be improved thereby.\\ 
+\textbf{Keywords:} \textit{Wireless Sensor Networks, Active Queue Management, Congestion Control. }
+	}
+
+\declaration[Candidate's Declaration]{I hereby certify that I have properly checked and verified all the items as prescribed
+in the check-list and ensure that my thesis is in the prop er format as specified in the
+guideline for thesis preparation. \\ I declare that the work containing in this rep ort is my own work. I understand that
+plagiarism is defined as any one or combination of the following: \begin{enumerate}
+	\item To steal and pass off (the ideas or words of another) as one's own
+	\item To use (another's production) without crediting the source
+	\item To commit literary theft
+	\item To present as new and original idea or product derived from an existing source.
+\end{enumerate}
+I understand that plagiarism involves an intentional act by the plagiarist of using someone else's work/ideas completely/partially and claiming authorship/originality of the work/ideas. Verbatim copy as well as close resemblance to some else's work constitute plagiarism. \\  I have given due credit to the original authors/sources for all the words, ideas, diagrams,
+graphics, computer programmes, experiments, results, websites, that are not my original contribution. I have used quotation marks to identify verbatim sentences and given
+credit to the original authors/sources. \\ I affirm that no portion of my work is plagiarized, and the experiments and results
+reported in the report/dissertation/thesis are not manipulated. In the event of a complaint of plagiarism and the manipulation of the experiments and results, I shall be fully
+responsible and answerable. My faculty supervisor(s) will not be responsible for the
+same. \\\\
+Signature: \\ \\
+Name: Ayushi Yadav\\ \\
+Roll. No: Mtech 2017AN-04 \\ \\
+Date: 
+
+
+}
+
+\dedication[\textbf{\textit{Dedicated to my parents.}}]{	% NEVER use \OnePageChapter here.
+	
+	}
+
+\acknowledgements{	\OnePageChapter	% *MUST* BE ONLY ONE PAGE!
+I am highly indebted to {\bf Dr. K.K. Pattanaik and Dr. Prasenjit Chanak} for giving me the autonomy of
+functioning and experimenting with ideas. I would like to take this opportunity to express my profound gratitude to them
+not only for their academic guidance but also for their personal interest in my report and constant support coupled with
+confidence boosting and motivating sessions which proved very fruitful and were instrumental in infusing self-assurance
+and trust within me. The nurturing and blossoming of the present work is mainly due to their valuable guidance,
+suggestions, astute judgment, constructive criticism and an eye for perfection. My mentors always answered myriad of my
+doubts with smiling graciousness and prodigious patience, never letting me feel that I am novices by always lending an
+ear to my views, appreciating and improving them and by giving me a free hand in my report. It's only
+because of their overwhelming interest and helpful attitude, the present work has attained the stage it has. \\
+\\
+Finally, I am grateful to our Institution and colleagues whose constant encouragement served to renew my spirit,
+refocus my attention and energy and helped me in carrying out this work.\\ \\ \\ \\
+\vspace{0.7in}
+\textbf{Date:}
+\hspace{4.3in}
+\textbf{Ayushi Yadav}
+	}
+
+% \IRBprotocol{E927F29.001X}	% optional!
+
+\ToCisShort	% use this only for 1-page Table of Contents
+
+\LoFisShort	% use this only for 1-page Table of Figures
+% \emptyLoF	% use this if there is no List of Figures
+
+\LoTisShort	% use this only for 1-page Table of Tables
+% \emptyLoT	% use this if there is no List of Tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%       BEGIN DOCUMENT...         %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input macros.tex
+\input chapter1.tex
+\input chapter2.tex
+\input chapter3.tex
+\input chapter4.tex
+\input chapter5.tex
+
+
+%%%%%%%%%   then the Bibliography, if any   %%%%%%%%%
+\bibliographystyle{plain}	% or "siam", or "alpha", etc.
+\nocite{*}		% list all refs in database, cited or not
+\bibliography{refs}		% Bib database in "refs.bib"
+%%%%%%%%%   then the Appendices, if any   %%%%%%%%%
+\appendix
+\appendixpage
+\input appendixA.tex
+\input appendixB.tex
+
+
+\end{document}
+
